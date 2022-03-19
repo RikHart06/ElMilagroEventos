@@ -65,10 +65,10 @@
         message: "I'm from Devro LABS",
       },
       success: function (data) {
-        alert("Sí se logró" + data.status);
+        alert("Sí se logró" + data);
       },
       error: function (err) {
-        alert("No se logró" + err.status + err.statusText);
+        alert("No se logró" + err);
       },
     });
 
