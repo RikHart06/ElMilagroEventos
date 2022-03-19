@@ -61,7 +61,7 @@
     
     $.ajax({
         method: 'POST',
-        url: 'https://formsubmit.co/b39b8b57b90bd11092b5f37e508731bc',
+        //url: 'https://formsubmit.co/b39b8b57b90bd11092b5f37e508731bc',
         dataType: 'json',
         accepts: 'application/json',
         data: {
