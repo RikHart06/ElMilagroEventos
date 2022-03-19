@@ -57,10 +57,27 @@
   
 
   function php_email_form_submit(thisForm, action, formData) {
+
+    
+    $.ajax({
+        method: 'POST',
+        url: 'https://formsubmit.co/b39b8b57b90bd11092b5f37e508731bc',
+        dataType: 'json',
+        accepts: 'application/json',
+        data: {
+          name: "FormSubmit",
+          message: "I'm from Devro LABS"
+        },
+        success: (data) => thisForm.querySelector('.sent-message').classList.add('d-block'),
+        error: (err) => displayError(thisForm, error)
+      });
+    
+
+/*
     fetch(action, {
       method: 'POST',
-      body: formData,
-      headers: {'X-Requested-With': 'XMLHttpRequest'}
+      body: formData //,
+      //headers: {'X-Requested-With': 'XMLHttpRequest'}
     })
     .then(response => {
       if( !response.ok ) {
@@ -80,7 +97,7 @@
     })
     .catch((error) => {
       displayError(thisForm, error);
-    });
+    });*/
   }
 
   function displayError(thisForm, error) {
