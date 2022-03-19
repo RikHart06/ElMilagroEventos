@@ -1,0 +1,25 @@
+.closeBtn{
+    background-color: transparent;
+    border: 0;
+}
+.modalTitle{
+
+    color: #BFA472;
+}
+
+.milagroBtn{
+    color: #fff;
+    background-color: #BFA472;
+    border-color: #BFA472;
+    
+}
+
+.milagroBtn:hover {
+    color: #fff;
+    background-color: #203247 ;
+    border-color: #203247;
+  }
+
+  .milagroBtn:active {
+    box-shadow: 0 0 0 0.25rem rgba(191, 164, 114, 0.5);
+  }
