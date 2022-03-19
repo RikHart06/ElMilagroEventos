@@ -893,29 +893,26 @@
               </div>
             </div>
 
-            <form action="https://formsubmit.co/b39b8b57b90bd11092b5f37e508731bc" method="POST"  role="form"
+            <form id="frmContact" action="https://formspree.io/f/xknyzkpn" method="POST"  role="form"
               class="php-email-form mt-4">
               <div class="row">
-                <input type="hidden" name="_next" value="">
-                <input type="hidden" name="_captcha" value="false">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Tu Nombre" required>
+                  <input type="text" name="_name" class="form-control" id="name" placeholder="Nombre" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Tu Correo" required>
+                  <input type="email" class="form-control" name="_email" id="email" placeholder="Correo" required>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required>
+                <input type="text" class="form-control" name="_subject" id="subject" placeholder="Asunto" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Mensaje se descomenta el url en el ajax"
+                <textarea class="form-control" name="_message" rows="5" placeholder="Mensaje"
                   required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Cargando</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Tu mensaje ha sido enviado. ¡Gracias!</div>
+                <div id="status" class="sent-message">Status</div>
               </div>
               <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
             </form>
@@ -1006,31 +1003,11 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/js/jquery3.6.0.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <script>
-    // https://api.jquery.com/jQuery.ajax
-    function submitForm() {
-      $.ajax({
-        method: 'POST',
-        url: 'https://formsubmit.co/b39b8b57b90bd11092b5f37e508731bc',
-        dataType: 'json',
-        accepts: 'application/json',
-        data: {
-          name: "FormSubmit",
-          message: "I'm from Devro LABS"
-        },
-        success: (data) => console.log(data),
-        error: (err) => console.log(err)
-      });
-    };
-
-  </script>
-
+  <script src="assets/vendor/php-email-form/formspree.js"></script>
 </body>
 
 </html>
