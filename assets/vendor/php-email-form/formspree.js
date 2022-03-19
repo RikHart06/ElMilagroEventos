@@ -4,8 +4,6 @@ async function handleSubmit(event) {
   event.preventDefault();
   var status = document.getElementById("status");
   var data = new FormData(event.target);
-  status.classList.add("loading");
-  status.classList.add("d-block");
   fetch(event.target.action, {
     method: form.method,
     body: data,
