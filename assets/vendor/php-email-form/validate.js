@@ -68,8 +68,8 @@
           name: "FormSubmit",
           message: "I'm from Devro LABS"
         },
-        success: (data) => thisForm.querySelector('.sent-message').classList.add('d-block'),
-        error: (err) => displayError(thisForm, error)
+        success: (data) => console.log(data),
+    error: (err) => console.log(err)
       });
     
 
