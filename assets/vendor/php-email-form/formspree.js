@@ -5,6 +5,7 @@ async function handleSubmit(event) {
   var status = document.getElementById("status");
   var data = new FormData(event.target);
   status.classList.add("d-block");
+  status.classList.add("loading");
   fetch(event.target.action, {
     method: form.method,
     body: data,
@@ -14,8 +15,8 @@ async function handleSubmit(event) {
   })
     .then((response) => {
       if (response.ok) {
-        status.classList.add("sent-message");
-        status.classList.add("d-block");
+        status.classList.replace("loading","sent-message");
+       // status.classList.add("sent-message");
         status.innerHTML = "Tu mensaje ha sido enviado. ¡Gracias!";
         form.reset();
       } else {
