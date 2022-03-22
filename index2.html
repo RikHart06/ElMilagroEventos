@@ -57,6 +57,8 @@
   </section><!-- End Hero -->
 
   <main id="main">
+    <p>Click the following button to see the function in action</p>  
+<input type = "button" onclick = "prueba()" value = "Test">  
 
   </main><!-- End #main -->
 
@@ -97,9 +99,9 @@
           });
           
         } else if (result.state === 'denied') {
-          report(result.state);
-          console.log("Denied");
+          report(result.state);          
           window.alert("denied");
+          console.log("Denied");
         }
         result.onchange = function () {
           report(result.state);
