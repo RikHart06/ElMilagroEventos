@@ -42,6 +42,42 @@
 </head>
 
 <body>
+  <!-- PLUGIN DE CHAT FACEBOOK MESSENGER-->
+  <section>
+    <!-- Messenger Plugin de chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin de chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "103971858823267");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: 'v13.0'
+        });
+      };
+
+      (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+  </section>
+
+  <!-- fin del plugin-->
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
@@ -922,43 +958,6 @@
 
       </div>
     </section><!-- End Contact Section -->
-
-    <!-- PLUGIN DE CHAT FACEBOOK MESSENGER-->
-    <section>
-      <!-- Messenger Plugin de chat Code -->
-      <div id="fb-root"></div>
-
-      <!-- Your Plugin de chat code -->
-      <div id="fb-customer-chat" class="fb-customerchat">
-      </div>
-
-      <script>
-        var chatbox = document.getElementById('fb-customer-chat');
-        chatbox.setAttribute("page_id", "103971858823267");
-        chatbox.setAttribute("attribution", "biz_inbox");
-      </script>
-
-      <!-- Your SDK code -->
-      <script>
-        window.fbAsyncInit = function () {
-          FB.init({
-            xfbml: true,
-            version: 'v13.0'
-          });
-        };
-
-        (function (d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-      </script>
-
-    </section>
-
-    <!-- fin del plugin-->
 
   </main><!-- End #main -->
 
